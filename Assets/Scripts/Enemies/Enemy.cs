@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private SpriteRenderer sr => GetComponent<SpriteRenderer>();
+    protected SpriteRenderer sr => GetComponent<SpriteRenderer>();
     protected Transform player;
     protected Animator anim;
     protected Rigidbody2D rb;
@@ -126,6 +126,14 @@ public class Enemy : MonoBehaviour
         isGroundInfrontDetected = Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
         isWallDetected = Physics2D.Raycast(transform.position, Vector2.right * facingDir, wallCheckDistance, whatIsGround);
         isPlayerDetected = Physics2D.Raycast(transform.position, Vector2.right * facingDir, playerDetectionDistance, whatIsPlayer);
+    }
+
+    protected void EnableColliders(bool enable)
+    {
+        foreach (Collider2D collider in colliders)
+        {
+            collider.enabled = enable;
+        }
     }
 
     protected virtual void OnDrawGizmos()
