@@ -50,6 +50,8 @@ public class Player : MonoBehaviour
     private bool isAirborne;
     private bool isWallDetected;
 
+
+    private Joystick joystick;
     private float xInput;
     private float yInput;
 
@@ -67,6 +69,9 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         cd = GetComponent<CapsuleCollider2D>();
         anim = GetComponentInChildren<Animator>();
+
+        FindFirstObjectByType<UI_JumpButton>().UpdatePlayersRef(this);
+        joystick = FindFirstObjectByType<Joystick>();
     }
 
     private void Start()
@@ -270,14 +275,17 @@ public class Player : MonoBehaviour
 
     private void HandleInput()
     {
-        xInput = Input.GetAxisRaw("Horizontal");
-        yInput = Input.GetAxisRaw("Vertical");
+        //xInput = Input.GetAxisRaw("Horizontal");
+        //yInput = Input.GetAxisRaw("Vertical");
 
+        xInput = joystick.Horizontal;
+        yInput = joystick.Vertical;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            
             JumpButton();
-            RequestBufferJump();
+
         }
     }
 
@@ -301,7 +309,14 @@ public class Player : MonoBehaviour
 
     #endregion
 
-    private void JumpButton()
+    public void JumpButton()
+    {
+        JumpAttempt();
+        RequestBufferJump();
+    }
+    
+    
+    private void JumpAttempt()
     {
         bool coyoteJumpAvalible = Time.time < coyoteJumpActivated + coyoteJumpWindow;
 

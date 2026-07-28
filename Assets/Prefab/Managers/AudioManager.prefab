@@ -877,6 +877,8 @@ MonoBehaviour:
   - {fileID: 509097741465478191}
   - {fileID: 5290482429248596866}
   - {fileID: 8869510293387377790}
+  bgm: []
+  bgmIndex: 0
 --- !u!1 &5225668288460740624
 GameObject:
   m_ObjectHideFlags: 0

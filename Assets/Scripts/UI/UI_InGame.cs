@@ -22,6 +22,9 @@ public class UI_InGame : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
+        isPaused = false;
+
         fadeEffect.ScreenFade(0, 1);
     }
 
@@ -49,6 +52,9 @@ public class UI_InGame : MonoBehaviour
 
     public void GoToMainMenuButton()
     {
+        if (isPaused)
+            PauseButton();
+
         SceneManager.LoadScene(0);
     }
 
