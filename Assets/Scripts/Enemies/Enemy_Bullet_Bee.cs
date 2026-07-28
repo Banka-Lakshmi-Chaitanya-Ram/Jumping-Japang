@@ -14,11 +14,16 @@ public class Enemy_Bullet_Bee : MonoBehaviour
 
     public void SetupBullet(Transform newTarget, float newSpeed, float lifeDuration)
     {
+        if (newTarget == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
         speed = newSpeed;
         target = newTarget;
 
         transform.up = transform.position - target.position;
-
+        
 
         StartCoroutine(AddWayPointCo());
         Destroy(gameObject,lifeDuration);

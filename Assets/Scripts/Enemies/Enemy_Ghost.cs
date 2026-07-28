@@ -41,6 +41,12 @@ public class Enemy_Ghost : Enemy
     {
         if (canMove == false)
             return;
+        
+        if (target == null)
+        {
+            EndChase();
+            return;
+        }
 
         HandleFlip(target.position.x);
         transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
