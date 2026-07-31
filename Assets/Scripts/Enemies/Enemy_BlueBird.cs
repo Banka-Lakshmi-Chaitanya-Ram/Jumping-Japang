@@ -30,7 +30,7 @@ public class Enemy_BlueBird : Enemy
         HandleMovement();
     }
 
-    private void FlyUp() => rb.velocity = new Vector2(rb.velocity.x, flyForce);
+    private void FlyUp() => rb.linearVelocity = new Vector2(rb.linearVelocity.x, flyForce);
 
     private void HandleMovement()
     {

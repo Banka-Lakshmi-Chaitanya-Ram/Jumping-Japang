@@ -60,7 +60,7 @@ public class Enemy_Radish : Enemy
     private void HandleFlying()
     {
         if (groundBelowDetected.distance < minFlyDistance)
-            rb.velocity = new Vector2(0, flyForce);
+            rb.linearVelocity = new Vector2(0, flyForce);
     }
 
     private void HandleTurnAround()
@@ -72,7 +72,7 @@ public class Enemy_Radish : Enemy
         {
             Flip();
             idleTimer = idleDuration;
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
         }
     }
 
@@ -84,7 +84,7 @@ public class Enemy_Radish : Enemy
         if (idleTimer > 0)
             return;
 
-        rb.velocity = new Vector2(moveSpeed * facingDir, rb.velocity.y);
+        rb.linearVelocity = new Vector2(moveSpeed * facingDir, rb.linearVelocity.y);
     }
 
     protected override void HandleAnimator()

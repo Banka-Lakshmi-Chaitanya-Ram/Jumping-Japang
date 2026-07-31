@@ -46,7 +46,7 @@ public class Enemy_Rino : Enemy
 
         HandleSpeedUp();
 
-        rb.velocity = new Vector2(moveSpeed * facingDir, rb.velocity.y);
+        rb.linearVelocity = new Vector2(moveSpeed * facingDir, rb.linearVelocity.y);
 
         if (isWallDetected)
             WallHit();
@@ -67,7 +67,7 @@ public class Enemy_Rino : Enemy
     {
         SpeedReset();
         canMove = false;
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         Flip();
     }
 
@@ -79,7 +79,7 @@ public class Enemy_Rino : Enemy
         SpeedReset();
 
         anim.SetBool("hitWall", true);
-        rb.velocity = new Vector2(impactPower.x * -facingDir, impactPower.y);
+        rb.linearVelocity = new Vector2(impactPower.x * -facingDir, impactPower.y);
     }
 
     private void SpeedReset()
