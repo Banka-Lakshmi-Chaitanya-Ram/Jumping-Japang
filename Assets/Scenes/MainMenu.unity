@@ -304,7 +304,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: 106}
+  m_AnchoredPosition: {x: 4, y: 58}
   m_SizeDelta: {x: 1521.4648, y: 256.0329}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &55076380
@@ -1189,7 +1189,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 39}
+  m_AnchoredPosition: {x: 0, y: 48}
   m_SizeDelta: {x: 481.3807, y: 96.383484}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &211859204
@@ -3430,9 +3430,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difficultyInfo: {fileID: 2119481350}
-  description: 'Unlimited life.
-
-    You don''t loose fruits on damage.'
+  description: "Unlimited life. You don't loose fruits on damage. \nBut Recommended
+    to select Normal or Hard mode for better \nGame Experience \n\nThis basically
+    a \n\n[ CHEAT MODE ]"
 --- !u!1 &883922831
 GameObject:
   m_ObjectHideFlags: 0
@@ -14539,7 +14539,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: 345}
+  m_AnchoredPosition: {x: 4, y: 297}
   m_SizeDelta: {x: 1521.4648, y: 256.0329}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &982577621
@@ -17026,7 +17026,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -4}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1663659480
@@ -18703,7 +18703,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 39}
+  m_AnchoredPosition: {x: 0, y: 52}
   m_SizeDelta: {x: 481.3807, y: 96.383484}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2059679962
