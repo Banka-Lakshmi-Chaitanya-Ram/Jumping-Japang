@@ -37,7 +37,14 @@ public class GameManager : MonoBehaviour
         if (instance == null)
             instance = this;
         else
+        {
             Destroy(gameObject);
+            return;
+        }
+
+        Application.targetFrameRate = 60;
+        QualitySettings.vSyncCount = 0;
+
     }
 
     private void Start()
