@@ -3430,9 +3430,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difficultyInfo: {fileID: 2119481350}
-  description: "Unlimited life. You don't loose fruits on damage. \nBut Recommended
-    to select Normal or Hard mode for better \nGame Experience \n\nThis basically
-    a \n\n[ CHEAT MODE ]"
+  description: 'Unlimited Lives. No fruit loss on damage.
+
+    Experimental Mode
+
+    Easy
+    Mode is still being developed and may not provide the intended game experience.
+
+    For
+    the most polished experience, please play on Normal or Hard.'
 --- !u!1 &883922831
 GameObject:
   m_ObjectHideFlags: 0
@@ -16988,9 +16994,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difficultyInfo: {fileID: 2119481350}
-  description: 'You loose fruits on damage.
+  description: 'The standard game mode.
 
-'
+
+    Taking damage costs fruits,
+
+    which
+    serve as your health.
+
+
+    Balanced challenge and fun.'
 --- !u!1 &1663659478
 GameObject:
   m_ObjectHideFlags: 0
@@ -18925,7 +18938,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -37.158386, y: 0, z: -46.448273, w: -32.51364}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
