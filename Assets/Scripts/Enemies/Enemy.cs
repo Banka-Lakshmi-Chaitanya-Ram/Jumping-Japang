@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -53,12 +54,32 @@ public class Enemy : MonoBehaviour
         }
 
         PlayerManager.OnPlayerRespawn += UpdatePlayerReference;
+
+        StartCoroutine(WaitForPlayer());
+    }
+
+    private IEnumerator WaitForPlayer()
+    {
+        while (PlayerManager.instance == null || PlayerManager.instance.player == null)
+            yield return null;
+
+        player = PlayerManager.instance.player.transform;
     }
 
     private void UpdatePlayerReference()
     {
-        if (player == null)
-            player = PlayerManager.instance.player.transform;
+        if (PlayerManager.instance == null)
+            return;
+        
+        if (PlayerManager.instance.player == null)
+        {
+            Invoke(nameof(UpdatePlayerReference), 0.1f);
+            return;
+        }
+
+        player = PlayerManager.instance.player.transform;
+
+        Debug.Log(name + " found player: " + player.name);
     }
 
     protected virtual void Update()

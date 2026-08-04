@@ -50,6 +50,7 @@ public class Enemy_Chicken : Enemy
     {
         if (canMove == false)
             return;
+            
 
         HandleFlip(player.transform.position.x);
 
@@ -66,6 +67,13 @@ public class Enemy_Chicken : Enemy
                 Invoke(nameof(Flip), .3f);
             }
         }
+    }
+    protected override void HandleCollision()
+    {
+        base.HandleCollision();
+
+        playerDetected = Physics2D.Raycast(transform.position, Vector2.right * facingDir, detectionRange, whatIsPlayer);
+
     }
 
     protected override void Flip()
