@@ -32,3 +32,6 @@ ExportedObj/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Visual Studio solution files
+*.slnx
