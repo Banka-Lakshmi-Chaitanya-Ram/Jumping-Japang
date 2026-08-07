@@ -68,9 +68,12 @@ public class Enemy : MonoBehaviour
 
     private void UpdatePlayerReference()
     {
+        if (this == null)
+            return;
+
         if (PlayerManager.instance == null)
             return;
-        
+
         if (PlayerManager.instance.player == null)
         {
             Invoke(nameof(UpdatePlayerReference), 0.1f);
@@ -79,7 +82,7 @@ public class Enemy : MonoBehaviour
 
         player = PlayerManager.instance.player.transform;
 
-        Debug.Log(name + " found player: " + player.name);
+        Debug.Log($"{gameObject.name} found player: {player.name}");
     }
 
     protected virtual void Update()
@@ -164,5 +167,9 @@ public class Enemy : MonoBehaviour
         Gizmos.DrawLine(groundCheck.position, new Vector2(groundCheck.position.x, groundCheck.position.y - groundCheckDistance));
         Gizmos.DrawLine(transform.position, new Vector2(transform.position.x + (wallCheckDistance * facingDir), transform.position.y));
         Gizmos.DrawLine(transform.position, new Vector2(transform.position.x + (playerDetectionDistance * facingDir), transform.position.y));
+    }
+    private void OnDestroy()
+    {
+        PlayerManager.OnPlayerRespawn -= UpdatePlayerReference;
     }
 }

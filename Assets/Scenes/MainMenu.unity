@@ -2364,7 +2364,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difficultyInfo: {fileID: 2119481350}
-  description: Any damage will kill you.
+  description: "Any damage will kill you.\nNO Checkpoint's Save Buddy. \nEnjoy your
+    game "
 --- !u!4 &558376339 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4454781807303230889, guid: 160a973fdf20e364981f5d2b68b2bb38, type: 3}
@@ -17000,10 +17001,12 @@ MonoBehaviour:
     Taking damage costs fruits,
 
     which
-    serve as your health.
+    serve as your HEALTH BAR.
 
 
-    Balanced challenge and fun.'
+    Balanced challenge and fun.
+
+    Enjoy your Game'
 --- !u!1 &1663659478
 GameObject:
   m_ObjectHideFlags: 0
